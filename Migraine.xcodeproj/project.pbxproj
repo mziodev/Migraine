@@ -6,17 +6,38 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXFileReference section */
-		08FB1E972CE6062F00872415 /* Migraine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Migraine.app; sourceTree = BUILT_PRODUCTS_DIR; };
-/* End PBXFileReference section */
+/* Begin PBXBuildFile section */
+		0803DB252CEC9566004A6D60 /* Migraine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0803DB242CEC9566004A6D60 /* Migraine.swift */; };
+		0803DB292CEC97C3004A6D60 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0803DB282CEC97C3004A6D60 /* SampleData.swift */; };
+		0803DB2B2CEC9832004A6D60 /* Migraine+SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0803DB2A2CEC9832004A6D60 /* Migraine+SampleData.swift */; };
+		0803DB2D2CEC98D2004A6D60 /* MigraineLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0803DB2C2CEC98D2004A6D60 /* MigraineLevel.swift */; };
+		08248AB92CE7534C005511BE /* Calendar+MonthUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08248AB82CE7534C005511BE /* Calendar+MonthUtilities.swift */; };
+		083104662CEBA89300002C7C /* Notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 083104652CEBA89300002C7C /* Notes.md */; };
+		089B782A2CE8A64D008238FE /* DateError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089B78292CE8A64C008238FE /* DateError.swift */; };
+		089B782C2CE8A7E2008238FE /* Date+MonthUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089B782B2CE8A7E2008238FE /* Date+MonthUtilities.swift */; };
+		08FB1EAE2CE607DF00872415 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB1EAB2CE607DF00872415 /* ContentView.swift */; };
+		08FB1EAF2CE607DF00872415 /* MigraineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB1EAC2CE607DF00872415 /* MigraineApp.swift */; };
+		08FB1EB02CE607DF00872415 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08FB1EA82CE607DF00872415 /* Preview Assets.xcassets */; };
+		08FB1EB12CE607DF00872415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08FB1EAA2CE607DF00872415 /* Assets.xcassets */; };
+		08FB1EB62CE61A8500872415 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB1EB52CE61A8500872415 /* Day.swift */; };
+/* End PBXBuildFile section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		08FB1E992CE6062F00872415 /* Migraine */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Migraine;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
+/* Begin PBXFileReference section */
+		0803DB242CEC9566004A6D60 /* Migraine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Migraine.swift; sourceTree = "<group>"; };
+		0803DB282CEC97C3004A6D60 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		0803DB2A2CEC9832004A6D60 /* Migraine+SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Migraine+SampleData.swift"; sourceTree = "<group>"; };
+		0803DB2C2CEC98D2004A6D60 /* MigraineLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigraineLevel.swift; sourceTree = "<group>"; };
+		08248AB82CE7534C005511BE /* Calendar+MonthUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+MonthUtilities.swift"; sourceTree = "<group>"; };
+		083104652CEBA89300002C7C /* Notes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Notes.md; sourceTree = "<group>"; };
+		089B78292CE8A64C008238FE /* DateError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateError.swift; sourceTree = "<group>"; };
+		089B782B2CE8A7E2008238FE /* Date+MonthUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+MonthUtilities.swift"; sourceTree = "<group>"; };
+		08FB1E972CE6062F00872415 /* Migraine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Migraine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		08FB1EA82CE607DF00872415 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		08FB1EAA2CE607DF00872415 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		08FB1EAB2CE607DF00872415 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		08FB1EAC2CE607DF00872415 /* MigraineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigraineApp.swift; sourceTree = "<group>"; };
+		08FB1EB52CE61A8500872415 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		08FB1E942CE6062F00872415 /* Frameworks */ = {
@@ -29,10 +50,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0803DB262CEC956D004A6D60 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0803DB242CEC9566004A6D60 /* Migraine.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0803DB272CEC97B2004A6D60 /* Utitlities */ = {
+			isa = PBXGroup;
+			children = (
+				0803DB282CEC97C3004A6D60 /* SampleData.swift */,
+			);
+			path = Utitlities;
+			sourceTree = "<group>";
+		};
+		08248AB72CE652D4005511BE /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				08FB1EB52CE61A8500872415 /* Day.swift */,
+				089B78292CE8A64C008238FE /* DateError.swift */,
+				0803DB2C2CEC98D2004A6D60 /* MigraineLevel.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		08248ABA2CE75351005511BE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				08248AB82CE7534C005511BE /* Calendar+MonthUtilities.swift */,
+				089B782B2CE8A7E2008238FE /* Date+MonthUtilities.swift */,
+				0803DB2A2CEC9832004A6D60 /* Migraine+SampleData.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		08FB1E8E2CE6062F00872415 = {
 			isa = PBXGroup;
 			children = (
-				08FB1E992CE6062F00872415 /* Migraine */,
+				08FB1EAD2CE607DF00872415 /* Migraine */,
 				08FB1E982CE6062F00872415 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +100,38 @@
 				08FB1E972CE6062F00872415 /* Migraine.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		08FB1EA92CE607DF00872415 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				08FB1EA82CE607DF00872415 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		08FB1EAD2CE607DF00872415 /* Migraine */ = {
+			isa = PBXGroup;
+			children = (
+				083104652CEBA89300002C7C /* Notes.md */,
+				08FB1EAC2CE607DF00872415 /* MigraineApp.swift */,
+				08248AB72CE652D4005511BE /* Enums */,
+				08248ABA2CE75351005511BE /* Extensions */,
+				0803DB262CEC956D004A6D60 /* Models */,
+				08FB1EA92CE607DF00872415 /* Preview Content */,
+				08FB1EAA2CE607DF00872415 /* Assets.xcassets */,
+				0803DB272CEC97B2004A6D60 /* Utitlities */,
+				08FB1EB42CE61A4100872415 /* Views */,
+			);
+			path = Migraine;
+			sourceTree = "<group>";
+		};
+		08FB1EB42CE61A4100872415 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				08FB1EAB2CE607DF00872415 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +148,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				08FB1E992CE6062F00872415 /* Migraine */,
 			);
 			name = Migraine;
 			packageProductDependencies = (
@@ -109,6 +195,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08FB1EB02CE607DF00872415 /* Preview Assets.xcassets in Resources */,
+				08FB1EB12CE607DF00872415 /* Assets.xcassets in Resources */,
+				083104662CEBA89300002C7C /* Notes.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +208,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089B782A2CE8A64D008238FE /* DateError.swift in Sources */,
+				08248AB92CE7534C005511BE /* Calendar+MonthUtilities.swift in Sources */,
+				08FB1EAE2CE607DF00872415 /* ContentView.swift in Sources */,
+				08FB1EAF2CE607DF00872415 /* MigraineApp.swift in Sources */,
+				0803DB2B2CEC9832004A6D60 /* Migraine+SampleData.swift in Sources */,
+				0803DB252CEC9566004A6D60 /* Migraine.swift in Sources */,
+				089B782C2CE8A7E2008238FE /* Date+MonthUtilities.swift in Sources */,
+				0803DB2D2CEC98D2004A6D60 /* MigraineLevel.swift in Sources */,
+				0803DB292CEC97C3004A6D60 /* SampleData.swift in Sources */,
+				08FB1EB62CE61A8500872415 /* Day.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
