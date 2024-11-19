@@ -32,7 +32,7 @@ struct MigraineApp: App {
     
     var body: some Scene {
         WindowGroup {
-            CalendarView()
+            ContentView()
                 .modelContainer(sharedModelContainer)
         }
     }

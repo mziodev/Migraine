@@ -15,23 +15,40 @@ enum MigraineLevel: Codable, CaseIterable {
     case severe
     case extreme
     
+    var number: Int {
+        switch self {
+        case .mild: 1
+        case .moderate: 2
+        case .intense: 3
+        case .severe: 4
+        case .extreme: 5
+        }
+    }
+    
     var name: String {
         switch self {
         case .mild: String(localized: "Mild")
         case .moderate: String(localized: "Moderate")
-        case .intense: String(localized: "Intense")
         case .severe: String(localized: "Severe")
+        case .intense: String(localized: "Intense")
         case .extreme: String(localized: "Extreme")
         }
     }
     
-    var color: Color {
+    var backgroundColor: Color {
         switch self {
         case .mild: .mgLemonLime
         case .moderate: .mgXanthous
-        case .severe: .mgPumpkin
-        case .intense: .mgScarlet
+        case .intense: .mgPumpkin
+        case .severe: .mgScarlet
         case .extreme: .mgPhlox
+        }
+    }
+    
+    var foregroundColor: Color {
+        switch self {
+        case .mild, .moderate: .primary
+        case .intense, .severe, .extreme: .white
         }
     }
 }
