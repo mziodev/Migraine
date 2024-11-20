@@ -15,7 +15,7 @@ struct MigraineList: View {
         NavigationStack {
             List(migraines) { migraine in
                 HStack {
-                    Text(migraine.date.day.description)
+                    Text(migraine.date.dayInt.description)
                     
                     Spacer()
                     

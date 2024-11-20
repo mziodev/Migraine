@@ -16,13 +16,13 @@ extension Calendar {
         self.component(.year, from: .now)
     }
     
-    func daysInMonth(of month: Int, year: Int) -> [Int] {
+    func daysInMonth(of month: Int, year: Int) -> [String] {
         let lastDay = try! Date.lastDay(of: month, year: year)
-        
-        return Array(1...lastDay.day)
+
+        return (1...lastDay.dayInt).map { String($0) }
     }
         
-    func daysBeforeMonth(of month: Int, year: Int) -> [Int] {
+    func daysBeforeMonth(of month: Int, year: Int) -> [String] {
         let previousMonth = month == 1 ? 12 : month - 1
         let previousYear = month == 1 ? year - 1 : year
         
@@ -36,7 +36,7 @@ extension Calendar {
         return daysInPreviousMonth.suffix(firstDay.weekday - 1)
     }
     
-    func daysAfterMonth(of month: Int, year: Int) -> [Int] {
+    func daysAfterMonth(of month: Int, year: Int) -> [String] {
         let nextMonth = month == 12 ? 1 : month + 1
         let nextYear = month == 12 ? year + 1 : year
         

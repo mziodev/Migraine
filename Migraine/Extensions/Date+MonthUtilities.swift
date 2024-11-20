@@ -8,8 +8,12 @@
 import Foundation
 
 extension Date {
-    var day: Int {
+    var dayInt: Int {
         Calendar.current.component(.day, from: self)
+    }
+    
+    var dayString: String {
+        String(dayInt)
     }
     
     var weekday: Int {

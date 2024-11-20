@@ -16,6 +16,10 @@ struct MigraineDetails: View {
     
     let isNew: Bool
     
+    private var viewTitle: String {
+        isNew ? "New migraine" : "Migraine details"
+    }
+    
     init(migraine: Migraine = Migraine(), isNew: Bool = false) {
         self.migraine = migraine
         self.isNew = isNew
@@ -66,7 +70,7 @@ struct MigraineDetails: View {
                 
             }
             .listStyle(.insetGrouped)
-            .navigationTitle("Migraine Details")
+            .navigationTitle(viewTitle)
             .toolbar {
                 if isNew {
                     ToolbarItem(placement: .cancellationAction) {
