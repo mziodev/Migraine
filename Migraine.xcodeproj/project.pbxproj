@@ -17,11 +17,12 @@
 		083104662CEBA89300002C7C /* Notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 083104652CEBA89300002C7C /* Notes.md */; };
 		089B782A2CE8A64D008238FE /* DateError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089B78292CE8A64C008238FE /* DateError.swift */; };
 		089B782C2CE8A7E2008238FE /* Date+MonthUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089B782B2CE8A7E2008238FE /* Date+MonthUtilities.swift */; };
-		08DDA1F22CEDE8A300BC38DA /* CalendarControlBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDA1F12CEDE8A300BC38DA /* CalendarControlBar.swift */; };
-		08DDA1F62CEDEDB300BC38DA /* WeekdayGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDA1F52CEDEDB300BC38DA /* WeekdayGridItem.swift */; };
+		08DDA1F22CEDE8A300BC38DA /* MigraineCalendarControlBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDA1F12CEDE8A300BC38DA /* MigraineCalendarControlBar.swift */; };
+		08DDA1F62CEDEDB300BC38DA /* MigraineCalendarWeekdayGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDA1F52CEDEDB300BC38DA /* MigraineCalendarWeekdayGridItem.swift */; };
 		08DDA1F82CEDEFB200BC38DA /* Array+Migraine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDA1F72CEDEFB200BC38DA /* Array+Migraine.swift */; };
-		08DDA1FA2CEDF7EA00BC38DA /* MigraineGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDA1F92CEDF7EA00BC38DA /* MigraineGridItem.swift */; };
+		08DDA1FA2CEDF7EA00BC38DA /* MigraineCalendarMigraineGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDA1F92CEDF7EA00BC38DA /* MigraineCalendarMigraineGridItem.swift */; };
 		08DDA1FC2CEE318A00BC38DA /* MigraineDetailsLevelSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDA1FB2CEE318A00BC38DA /* MigraineDetailsLevelSelector.swift */; };
+		08DDA1FE2CEE371C00BC38DA /* MigraineCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDA1FD2CEE371B00BC38DA /* MigraineCalendar.swift */; };
 		08FB1EAE2CE607DF00872415 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB1EAB2CE607DF00872415 /* ContentView.swift */; };
 		08FB1EAF2CE607DF00872415 /* MigraineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB1EAC2CE607DF00872415 /* MigraineApp.swift */; };
 		08FB1EB02CE607DF00872415 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08FB1EA82CE607DF00872415 /* Preview Assets.xcassets */; };
@@ -40,11 +41,12 @@
 		083104652CEBA89300002C7C /* Notes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Notes.md; sourceTree = "<group>"; };
 		089B78292CE8A64C008238FE /* DateError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateError.swift; sourceTree = "<group>"; };
 		089B782B2CE8A7E2008238FE /* Date+MonthUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+MonthUtilities.swift"; sourceTree = "<group>"; };
-		08DDA1F12CEDE8A300BC38DA /* CalendarControlBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarControlBar.swift; sourceTree = "<group>"; };
-		08DDA1F52CEDEDB300BC38DA /* WeekdayGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayGridItem.swift; sourceTree = "<group>"; };
+		08DDA1F12CEDE8A300BC38DA /* MigraineCalendarControlBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigraineCalendarControlBar.swift; sourceTree = "<group>"; };
+		08DDA1F52CEDEDB300BC38DA /* MigraineCalendarWeekdayGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigraineCalendarWeekdayGridItem.swift; sourceTree = "<group>"; };
 		08DDA1F72CEDEFB200BC38DA /* Array+Migraine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Migraine.swift"; sourceTree = "<group>"; };
-		08DDA1F92CEDF7EA00BC38DA /* MigraineGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigraineGridItem.swift; sourceTree = "<group>"; };
+		08DDA1F92CEDF7EA00BC38DA /* MigraineCalendarMigraineGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigraineCalendarMigraineGridItem.swift; sourceTree = "<group>"; };
 		08DDA1FB2CEE318A00BC38DA /* MigraineDetailsLevelSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigraineDetailsLevelSelector.swift; sourceTree = "<group>"; };
+		08DDA1FD2CEE371B00BC38DA /* MigraineCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigraineCalendar.swift; sourceTree = "<group>"; };
 		08FB1E972CE6062F00872415 /* Migraine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Migraine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FB1EA82CE607DF00872415 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		08FB1EAA2CE607DF00872415 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,13 +146,14 @@
 		08FB1EB42CE61A4100872415 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				08DDA1F12CEDE8A300BC38DA /* CalendarControlBar.swift */,
 				08FB1EAB2CE607DF00872415 /* ContentView.swift */,
+				08DDA1FD2CEE371B00BC38DA /* MigraineCalendar.swift */,
+				08DDA1F12CEDE8A300BC38DA /* MigraineCalendarControlBar.swift */,
+				08DDA1F92CEDF7EA00BC38DA /* MigraineCalendarMigraineGridItem.swift */,
+				08DDA1F52CEDEDB300BC38DA /* MigraineCalendarWeekdayGridItem.swift */,
 				0803DB302CECA8E2004A6D60 /* MigraineDetails.swift */,
 				08DDA1FB2CEE318A00BC38DA /* MigraineDetailsLevelSelector.swift */,
-				08DDA1F92CEDF7EA00BC38DA /* MigraineGridItem.swift */,
 				0803DB2E2CECA39C004A6D60 /* MigraineList.swift */,
-				08DDA1F52CEDEDB300BC38DA /* WeekdayGridItem.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -232,7 +235,7 @@
 				089B782A2CE8A64D008238FE /* DateError.swift in Sources */,
 				0803DB2F2CECA39C004A6D60 /* MigraineList.swift in Sources */,
 				08DDA1FC2CEE318A00BC38DA /* MigraineDetailsLevelSelector.swift in Sources */,
-				08DDA1FA2CEDF7EA00BC38DA /* MigraineGridItem.swift in Sources */,
+				08DDA1FA2CEDF7EA00BC38DA /* MigraineCalendarMigraineGridItem.swift in Sources */,
 				08248AB92CE7534C005511BE /* Calendar+MonthUtilities.swift in Sources */,
 				08FB1EAE2CE607DF00872415 /* ContentView.swift in Sources */,
 				08FB1EAF2CE607DF00872415 /* MigraineApp.swift in Sources */,
@@ -241,10 +244,11 @@
 				08DDA1F82CEDEFB200BC38DA /* Array+Migraine.swift in Sources */,
 				089B782C2CE8A7E2008238FE /* Date+MonthUtilities.swift in Sources */,
 				0803DB2D2CEC98D2004A6D60 /* MigraineLevel.swift in Sources */,
-				08DDA1F62CEDEDB300BC38DA /* WeekdayGridItem.swift in Sources */,
+				08DDA1F62CEDEDB300BC38DA /* MigraineCalendarWeekdayGridItem.swift in Sources */,
 				0803DB292CEC97C3004A6D60 /* SampleData.swift in Sources */,
+				08DDA1FE2CEE371C00BC38DA /* MigraineCalendar.swift in Sources */,
 				0803DB312CECA8E2004A6D60 /* MigraineDetails.swift in Sources */,
-				08DDA1F22CEDE8A300BC38DA /* CalendarControlBar.swift in Sources */,
+				08DDA1F22CEDE8A300BC38DA /* MigraineCalendarControlBar.swift in Sources */,
 				08FB1EB62CE61A8500872415 /* Day.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

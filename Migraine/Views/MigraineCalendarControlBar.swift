@@ -1,5 +1,5 @@
 //
-//  CalendarControlBar.swift
+//  MigraineCalendarControlBar.swift
 //  Migraine
 //
 //  Created by MZiO on 20/11/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CalendarControlBar: View {
+struct MigraineCalendarControlBar: View {
     @Binding var currentMonth: Int
     @Binding var currentYear: Int
     
@@ -56,5 +56,5 @@ struct CalendarControlBar: View {
 }
 
 #Preview {
-    CalendarControlBar(currentMonth: .constant(10), currentYear: .constant(2024))
+    MigraineCalendarControlBar(currentMonth: .constant(10), currentYear: .constant(2024))
 }

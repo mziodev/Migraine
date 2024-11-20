@@ -1,5 +1,5 @@
 //
-//  MigraineGridItem.swift
+//  MigraineCalendarMigraineGridItem.swift
 //  Migraine
 //
 //  Created by MZiO on 20/11/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MigraineGridItem: View {
+struct MigraineCalendarMigraineGridItem: View {
     let calendarSymbol: String
     let migraineLevel: MigraineLevel
     
@@ -28,7 +28,7 @@ struct MigraineGridItem: View {
 }
 
 #Preview {
-    MigraineGridItem(
+    MigraineCalendarMigraineGridItem(
         calendarSymbol: "22",
         migraineLevel: SampleData.shared.migraine.level
     )

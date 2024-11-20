@@ -1,5 +1,5 @@
 //
-//  WeekdayGridItem.swift
+//  MigraineCalendarWeekdayGridItem.swift
 //  Migraine
 //
 //  Created by MZiO on 20/11/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WeekdayGridItem: View {
+struct MigraineCalendarWeekdayGridItem: View {
     let calendarSymbol: String
     
     var body: some View {
@@ -20,9 +20,9 @@ struct WeekdayGridItem: View {
 }
 
 #Preview("Letter S symbol") {
-    WeekdayGridItem(calendarSymbol: "S")
+    MigraineCalendarWeekdayGridItem(calendarSymbol: "S")
 }
 
 #Preview("Number symbol") {
-    WeekdayGridItem(calendarSymbol: "22")
+    MigraineCalendarWeekdayGridItem(calendarSymbol: "22")
 }

@@ -54,6 +54,16 @@ struct MigraineDetails: View {
                     .padding()
                 }
                 
+                Section {
+                    Button("Delete Migraine", action: deleteMigraine)
+                        .font(.headline)
+                        .frame(maxWidth: .infinity, maxHeight: 50)
+                        .background(Color.red)
+                        .clipShape(.rect(cornerRadius: 12))
+                        .foregroundStyle(.white)
+                }
+                .listRowBackground(Color.clear)
+                
             }
             .listStyle(.insetGrouped)
             .navigationTitle(migraineDetailsTitle)
@@ -83,6 +93,12 @@ struct MigraineDetails: View {
     private func save() {
         if isNew { modelContext.insert(migraine) }
         isMigraineSaved = true
+        
+        dismiss()
+    }
+    
+    private func deleteMigraine() {
+        modelContext.delete(migraine)
         
         dismiss()
     }
