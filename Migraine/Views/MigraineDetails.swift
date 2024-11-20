@@ -13,7 +13,9 @@ struct MigraineDetails: View {
     @Environment(\.modelContext) var modelContext
     
     @State var migraine: Migraine
-    @State private var isMigraineSaved: Bool = false
+    
+    @State private var isMigraineSaved = false
+    @State private var showingDeleteAlert = false
     
     let isNew: Bool
     let originalMigraine = Migraine()
@@ -54,19 +56,31 @@ struct MigraineDetails: View {
                     .padding()
                 }
                 
-                Section {
-                    Button("Delete Migraine", action: deleteMigraine)
-                        .font(.headline)
-                        .frame(maxWidth: .infinity, maxHeight: 50)
-                        .background(Color.red)
-                        .clipShape(.rect(cornerRadius: 12))
-                        .foregroundStyle(.white)
+                if !isNew {
+                    Section {
+                        Button("Delete Migraine", action: showDeleteAlert)
+                            .font(.headline)
+                            .frame(maxWidth: .infinity, maxHeight: 50)
+                            .background(Color.red)
+                            .clipShape(.rect(cornerRadius: 12))
+                            .foregroundStyle(.white)
+                    }
+                    .listRowBackground(Color.clear)
                 }
-                .listRowBackground(Color.clear)
                 
             }
             .listStyle(.insetGrouped)
             .navigationTitle(migraineDetailsTitle)
+            .alert(
+                "Warning!",
+                isPresented: $showingDeleteAlert,
+                actions: {
+                    Button("Yes", role: .destructive, action: deleteMigraine)
+                },
+                message: {
+                    Text("Are you sure you want to delete this migraine?")
+                }
+            )
             .onDisappear {
                 if !isMigraineSaved {
                     migraine.copy(from: originalMigraine)
@@ -95,6 +109,10 @@ struct MigraineDetails: View {
         isMigraineSaved = true
         
         dismiss()
+    }
+    
+    private func showDeleteAlert() {
+        showingDeleteAlert = true
     }
     
     private func deleteMigraine() {
