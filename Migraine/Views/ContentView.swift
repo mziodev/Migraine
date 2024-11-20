@@ -5,12 +5,14 @@
 //  Created by MZiO on 14/11/24.
 //
 
+import SwiftData
 import SwiftUI
 
 struct ContentView: View {
+    @Query(sort: \Migraine.date) var migranes: [Migraine]
+    
     @State private var currentMonth = Calendar.current.month
     @State private var currentYear = Calendar.current.year
-    
     @State private var showingAddMigrane: Bool = false
     
     private let gridColumns: [GridItem] = Array(
@@ -20,8 +22,11 @@ struct ContentView: View {
     
     private let monthSymbols = Calendar.current.monthSymbols
     private let weekdaySymbols = Calendar.current.veryShortWeekdaySymbols
+    private var currentMonthMigraines: [Migraine] {
+        migranes.filterByMonth(currentMonth, year: currentYear)
+    }
     
-    private var viewTitle: String {
+    private var contentViewTitle: String {
         monthSymbols[currentMonth - 1] + ", \(currentYear)"
     }
     
@@ -40,25 +45,10 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 30) {
-                HStack {
-                    Button(action: decreaseMonth) {
-                        Image(systemName: "chevron.left")
-                    }
-                    
-                    Spacer()
-                    
-                    Button(action: jumpToCurrentMonth) {
-                        Image(systemName: "record.circle")
-                    }
-                    
-                    Spacer()
-                    
-                    Button(action: increaseMonth) {
-                        Image(systemName: "chevron.right")
-                    }
-                }
-                .font(.headline)
-                .padding()
+                CalendarControlBar(
+                    currentMonth: $currentMonth,
+                    currentYear: $currentYear
+                )
                 
                 LazyVGrid(columns: gridColumns, spacing: 30) {
                     ForEach(
@@ -68,13 +58,22 @@ struct ContentView: View {
                         let calendarSymbol = calendarSymbols[index]
                         
                         if weekdaySymbols.contains(calendarSymbol) {
-                            Text(calendarSymbol)
-                                .font(.headline)
-                                .foregroundStyle(
-                                    calendarSymbol == "S" ? .secondary : .primary
-                                )
+                            WeekdayGridItem(calendarSymbol: calendarSymbol)
                         } else {
-                            Text(calendarSymbol)
+                            if let migraine = currentMonthMigraines.first(where: {
+                                $0.date.dayString == calendarSymbol
+                            }) {
+                                NavigationLink {
+                                    MigraineDetails(migraine: migraine)
+                                } label: {
+                                    MigraineGridItem(
+                                        calendarSymbol: calendarSymbol,
+                                        migraineLevel: migraine.level
+                                    )
+                                }
+                            } else {
+                                Text(calendarSymbol)
+                            }
                         }
                     }
                 }
@@ -82,36 +81,15 @@ struct ContentView: View {
                 
                 Button(action: addMigraine) {
                     Label("Add Migraine", systemImage: "plus.circle.fill")
-                        .font(.title3)
+                        .font(.headline)
                         .bold()
                 }
             }
             .padding(.horizontal)
-            .navigationTitle(viewTitle)
+            .navigationTitle(contentViewTitle)
             .sheet(isPresented: $showingAddMigrane) {
                 MigraineDetails(isNew: true)
             }
-        }
-    }
-    
-    private func decreaseMonth() {
-        withAnimation {
-            currentMonth = currentMonth == 1 ? 12 : currentMonth - 1
-            currentYear = currentMonth == 12 ? currentYear - 1 : currentYear
-        }
-    }
-    
-    private func increaseMonth() {
-        withAnimation {
-            currentMonth = currentMonth == 12 ? 1 : currentMonth + 1
-            currentYear = currentMonth == 1 ? currentYear + 1 : currentYear
-        }
-    }
-    
-    private func jumpToCurrentMonth() {
-        withAnimation {
-            currentMonth = Calendar.current.month
-            currentYear = Calendar.current.year
         }
     }
     
@@ -122,4 +100,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .modelContainer(SampleData.shared.modelContainer)
 }

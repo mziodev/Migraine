@@ -13,16 +13,20 @@ struct MigraineDetails: View {
     @Environment(\.modelContext) var modelContext
     
     @State var migraine: Migraine
+    @State private var isMigraineSaved: Bool = false
     
     let isNew: Bool
+    let originalMigraine = Migraine()
     
-    private var viewTitle: String {
+    private var migraineDetailsTitle: String {
         isNew ? "New migraine" : "Migraine details"
     }
     
     init(migraine: Migraine = Migraine(), isNew: Bool = false) {
         self.migraine = migraine
         self.isNew = isNew
+        
+        self.originalMigraine.copy(from: migraine)
     }
     
     var body: some View {
@@ -38,25 +42,7 @@ struct MigraineDetails: View {
                 }
                 
                 Section("Level") {
-                    VStack {
-                        RoundedRectangle(cornerRadius: 12)
-                            .frame(height: 50)
-                            .foregroundStyle(migraine.level.backgroundColor)
-                            .overlay {
-                                Text(migraine.level.name)
-                                    .font(.headline.smallCaps())
-                                    .foregroundStyle(
-                                        migraine.level.foregroundColor
-                                    )
-                            }
-                        
-                        Picker("Migraine level", selection: $migraine.level) {
-                            ForEach(MigraineLevel.allCases, id: \.self) { level in
-                                Text(level.number.description)
-                            }
-                        }
-                        .pickerStyle(.palette)
-                    }
+                    MigraineDetailsLevelSelector(migraine: $migraine)
                 }
                 
                 Section("Notes") {
@@ -70,7 +56,12 @@ struct MigraineDetails: View {
                 
             }
             .listStyle(.insetGrouped)
-            .navigationTitle(viewTitle)
+            .navigationTitle(migraineDetailsTitle)
+            .onDisappear {
+                if !isMigraineSaved {
+                    migraine.copy(from: originalMigraine)
+                }
+            }
             .toolbar {
                 if isNew {
                     ToolbarItem(placement: .cancellationAction) {
@@ -90,13 +81,9 @@ struct MigraineDetails: View {
     }
     
     private func save() {
-        let newMigraine = Migraine(
-            date: migraine.date,
-            level: migraine.level,
-            notes: migraine.notes
-        )
+        if isNew { modelContext.insert(migraine) }
+        isMigraineSaved = true
         
-        modelContext.insert(newMigraine)
         dismiss()
     }
 }
